@@ -19,8 +19,8 @@ pipeline {
         stage('Deploy') {
             agent any
             steps {
-                echo 'Publicando aplicacao'
-                sh 'scp target/Api-Investimentos.jar ubuntu@54.183.177.22:/home/ubuntu'
+                echo 'Copiando aplicacao para servidor AWS'
+                sh 'scp -o StrictHostKeyChecking=no target/Api-Investimentos.jar ubuntu@54.183.177.22:/home/ubuntu'
             }
         }
     } 
