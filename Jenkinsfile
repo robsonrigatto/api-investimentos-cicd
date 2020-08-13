@@ -20,7 +20,7 @@ pipeline {
             agent any
             steps {
                 echo 'Publicando aplicacao'
-                sh 'echo "Hello world"'
+                sh 'scp target/Api-Investimentos.jar ubuntu@54.183.177.22:/home/ubuntu'
             }
         }
     } 
